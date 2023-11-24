@@ -7,6 +7,7 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png">
         <script src="https://bundle.run/noble-secp256k1@1.2.14"></script>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&family=Source+Sans+3:wght@300&family=Tektur&display=swap');
             * {
                 box-sizing: border-box;
                 font-size: 1.15rem;
@@ -21,6 +22,7 @@
             }
             h1 {
                 font-size: 2rem;
+                font-family: Tektur, sans-serif;
             }
             h2 {
                 font-size: 1.5rem;
@@ -75,13 +77,16 @@
                 margin-bottom: 2rem;
             }
             .big_button {
-                padding: 1rem;
-                background-color: red;
+                padding: 10px;
+                background-color: rgb(0, 0, 0);
                 color: white;
                 font-weight: bold;
                 text-align: center;
+                font-size:16px;
+                text-transform: uppercase;
                 min-width: 8rem;
                 cursor: pointer;
+                width:100%;
             }
             .genie {
                 max-height: 15rem;
@@ -202,90 +207,20 @@
         </script>
     </head>
     <body>
-        <h1>
-            Magic Webstore 🪄
-        </h1>
+        <center>
+        <h1>uncommon</h1>
         <div class="explain">
-            <div class="row">
-                <div class="video">
-                    <a href="https://www.youtube.com/watch?v=cAH0384V1Bo" target="_blank"><img style="width: 100%; filter: drop-shadow(0 0 3px #000);" src="https://camo.githubusercontent.com/2224bee86d24077884a26c7aa6e72596ca60ec004a9ac4f8f2b73d78dc291c1a/68747470733a2f2f7375706572746573746e65742e6769746875622e696f2f737570657273746f72652f737570657273746f72652d7468756d626e61696c2e706e67"></a>
-                </div>
                 <div class="basics">
-                    <h2 class="big_title">
-                        Ecommerce Simplified
-                    </h2>
-                    <p class="simple_desc">
-                        Magic Webstore is focused on reducing the headaches of running a webstore.
-                    </p>
                     <div class="big_buttons">
-                        <div class="big_button signup_btn">Get&nbsp;started</div>
+                        <div style="display:none" class="big_button signup_btn">Get&nbsp;started</div>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                        <div class="big_button login_btn">Log&nbsp;in</div>
-                    </div>
+                        <div class="big_button login_btn">Login</div>
                 </div>
             </div>
-            <div class="row">
-                <div class="basics">
-                    <h2 class="big_title">
-                        The Magic String
-                    </h2>
-                    <p class="simple_desc">
-                        With Magic Webstore, your entire store is contained in your magic string, like a genie in a lamp. You just need to save that one string (back it up and store it safely) and you can do everything you need: add products to your store, manage your inventory, track your income, and keep your money safe.
-                    </p>
-                </div>
-                <div class="video">
-                    <img class="genie" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Magic_lamp.svg/614px-Magic_lamp.svg.png">
-                </div>
-            </div>
-            <div class="row">
-                <div class="video">
-                    <img style="width: 100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Teacher_%2814016%29_-_The_Noun_Project.svg/768px-Teacher_%2814016%29_-_The_Noun_Project.svg.png">
-                </div>
-                <div class="basics">
-                    <h2 class="big_title">
-                        The Big Difference
-                    </h2>
-                    <p class="simple_desc">
-                         Unlike traditional webstores, Magic Webstore doesn't need your identity or bank account information, so the onboarding process is sleek and simple. Your Magic Webstore will automatically create a bitcoin wallet for you and even your private key is contained in your Magic String.<br><br>You just start adding products to your store and then share the link with people. They can view your products, buy items from you, and send you messages. 
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="basics">
-                    <h2 class="big_title">
-                        How can I use Magic Webstore?
-                    </h2>
-                    <p class="simple_desc">
-                         Magic Webstore lets you monetize your life. Have a youtube channel? Start selling merchandise through Magic Webstore. Have a blog? Let people support you through sales and branding. Want to sell items at a farmer's market? Treat Magic Webstore as your point of sale system and let people check out with ease.<br><br>Try it out today! Magic Webstore is proudly built on bitcoin, the money of the internet, and nostr, a distributed data caching protocol. Magic Webstore is completely free and open source and you can dive into its source code by <a href="https://github.com/supertestnet/superstore" target="_blank">clicking here</a>.
-                    </p>
-                </div>
-                <div class="video">
-                    <img style="width: 100%; max-width: 18rem;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Home_Business_BLUE_Graphic.png/693px-Home_Business_BLUE_Graphic.png">
-                </div>
-            </div>
-        </div>
-        <div style="text-align: right; margin: auto; margin-bottom: 1rem; max-width: 25rem;"><button class="back_btn">Back</button></div>
-        <div class="signup">
-            <div style="text-align: center;">
-                Magic Webstore does not use traditional usernames and passwords, it uses magic strings. Make sure to back yours up! Your magic string is the only way to access your store.<br>
-            </div>
-            <div class="circle_row">
-                <div class="circle"><div>1</div></div>
-                <div class="instruction"><span class="blue" onclick="genString()">Generate</span> your magic string</div>
-            </div>
-            <div style="flex-direction: column; justify-content: center; align-items: center; word-wrap: break-word; overflow-wrap: anywhere; padding: 1rem; border: 1px solid black; margin-top: 1rem; display: none;" class="magic_string_box"><p style="font-weight: bold; text-decoration: underline;">Your magic string</p><div class="magic_string"></div></div>
-            <div class="circle_row">
-                <div class="circle"><div>2</div></div>
-                <div class="instruction"><span class="blue" onclick="backupString()">Back up</span> your magic string</div>
-            </div>
-            <div class="circle_row">
-                <div class="circle"><div>3</div></div>
-                <div class="instruction"><span class="blue" onclick="useString()">Log in</span> with your magic string</div>
-            </div>
-        </div>
+        </center>
         <script>
             var useString = () => {
-                var ms = prompt( "Please enter your magic string" );
+                var ms = prompt( "Please enter store key" );
                 if ( !ms ) return;
                 var privkey = ms.substring( 0, 64 );
                 var relays = hexToText( ms.substring( 64 ) );
